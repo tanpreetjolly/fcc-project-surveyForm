@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js"></script>
+    <title>Survey Form</title>
+  </head>
+  <body class="container">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      <em>Thank you for taking the time to help us improve the platform</em>
+    </p>
+    <form link="httpbin.org/post" method="post" id="survey-form" action="get">
+      <fieldset class="area">
+        <label for="name">
+          <p class="form-captions">Name</p>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            class="input"
+            required
+          />
+        </label>
+        <label for="email">
+          <p class="form-captions">Email</p>
+          <input
+            type="text"
+            placeholder="Enter your Email"
+            id="email"
+            class="input"
+            required
+          />
+        </label>
+        <label for="age">
+          <p class="form-captions">Age</p>
+          <input type="text" placeholder="Age" id="age" class="input" />
+        </label>
+        <label for="role">
+          <p class="form-captions">
+            Which option best describes your current role?
+          </p>
+          <select name="role" id="role" class="roles-list">
+            <option value="pt">Learner</option>
+            <option value="std">Student</option>
+            <option value="ft">Full Time Job</option>
+            <option value="ots">Others</option>
+          </select>
+        </label>
+        <label for="recommend" class="select">
+          <p class="form-captions">
+            Would you recommend our course to a friend?
+          </p>
+          <nest
+            ><input
+              type="radio"
+              name="recommend"
+              id="recommend"
+              class="radio"
+            />
+            Definitely</nest
+          >
+          <nest
+            ><input
+              type="radio"
+              name="recommend"
+              id="recommend"
+              class="radio"
+            />
+            Maybe</nest
+          >
+          <nest
+            ><input
+              type="radio"
+              name="recommend"
+              id="recommend"
+              class="radio"
+            />
+            Not Sure</nest
+          >
+        </label>
+        <label for="improve" class="select">
+          <p class="form-captions">
+            What would you like to see improved?<em>(Check all that apply)</em>
+          </p>
+          <nest-2>
+            <input type="checkbox" name="improve" id="improve" />
+            Front-end Development
+          </nest-2>
+          <nest-2>
+            <input type="checkbox" name="improve" id="improve" />
+            Back-end Development
+          </nest-2>
+          <nest-2>
+            <input type="checkbox" name="improve" id="improve" />
+            Data Visualization
+          </nest-2>
+          <nest-2>
+            <input type="checkbox" name="improve" id="improve" />
+            Open Source Community
+          </nest-2>
+        </label>
+        <label for="comments">
+          <p class="form-captions">Any comments or suggestions?</p>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="10"
+            rows="10"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </label>
+        <label for="submit" class="bttn">
+          <input type="button" value="Submit" />
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>
